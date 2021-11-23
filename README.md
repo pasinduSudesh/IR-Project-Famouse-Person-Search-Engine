@@ -26,7 +26,7 @@ This is a search engine that can seach famouse book writer's details
 - search.py - Search functionality
 - main.py - flask server
 
-###Book Writer Details
+### Book Writer Details
 Data is contained in jason file.All data in sinhala language. Writer name is in both Sinhala and English language. Writer details feilds are
  - writer_name - Name of the writer in Sinhala
  - writer_name_eng - Name of the writer in English
@@ -39,6 +39,7 @@ Data is contained in jason file.All data in sinhala language. Writer name is in 
  - education - Schools and Universities writer went
  
  Eg:
+         
          {
             "writer_name": "විමලරත්න කුමාරගම",
             "writer_name_eng": "Vimalarathne Kumaragama",
@@ -46,7 +47,6 @@ Data is contained in jason file.All data in sinhala language. Writer name is in 
             "writer_birth_place": "පාතදුම්බර",
             "education": [
                 "කටුගස්තොට ශ්‍රී රාහුල විද්‍යාලය"
-
             ],
             "book_list": [
                 "නිල්සීනය",
@@ -66,6 +66,9 @@ Data is contained in jason file.All data in sinhala language. Writer name is in 
             ]
         }
  
+ ### Functionalities
+ - Can search by using writer_name, writer_name_eng, writer_dob, writer_birth_place, book_list, writer_life_story, writtern_language, wrote_categories
+ -- ds
 
 
 

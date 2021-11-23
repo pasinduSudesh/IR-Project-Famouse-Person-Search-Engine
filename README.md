@@ -68,7 +68,22 @@ Data is contained in jason file.All data in sinhala language. Writer name is in 
  
  ### Functionalities
  - Can search by using writer_name, writer_name_eng, writer_dob, writer_birth_place, book_list, writer_life_story, writtern_language, wrote_categories
- -- ds
+
+ඇලන් මුවර්, ජී‍.බී. සේනානායක, දැල් කවුළුව, පේරාදෙණිය විශ්වවිද්‍යාලය
+
+- Search engine can understand some synonyms related to writer name, writer birth place, writer wrote books, writer education level
+-- Writer Name - රැයිපියෙල් තෙන්නකෝන් රචකයා, මහගම සේකර ගත්කරු
+-- Writer Birth Place - කොළඹ උපන් රචකයෝ
+-- Writer wrote books - රතු රෝස ලියූ රචකයා
+-- Writer education level - රද්දොළුවේ බුදුනු පාසල ඉගෙනගත් රචකයා
+
+- Writer can search their name in English language
+
+author mahagama sekara 
+
+- Search Query can be in both sinhala and English languagr
+
+author මහගම සේකර
 
 
 

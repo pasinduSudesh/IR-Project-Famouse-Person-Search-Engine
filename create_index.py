@@ -4,7 +4,7 @@ import codecs
 import json,re,os
 
 client = Elasticsearch(HOST="http://localhost",PORT=9200)
-INDEX = 'famous-persons'
+INDEX = 'famous-writers'
 
 
 def create_index():
@@ -45,6 +45,15 @@ def create_index():
                         "analyzer" : "sinhala-analyzer",
                         "search_analyzer": "standard"
                     },
+                    "writer_name_eng": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword",
+                                "ignore_above": 256
+                            }
+                        }
+                    },
                     "writer_dob": {
                         "type": "text",
                         "fields": {
@@ -66,6 +75,15 @@ def create_index():
                         },
                         "analyzer" : "sinhala-analyzer",
                         "search_analyzer": "standard"
+                    },
+                    "writer_birth_place_eng": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword",
+                                "ignore_above": 256
+                            }
+                        }
                     },
                     "education": {
                         "type": "text",
@@ -167,8 +185,10 @@ def generate_data(writers_list):
     for writer in writers_list:
 
         writer_name = writer["writer_name"]
+        writer_name_eng = writer["writer_name_eng"]
         writer_dob = writer["writer_dob"]
         writer_birth_place = writer["writer_birth_place"]
+        writer_birth_place_eng = writer["writer_birth_place_eng"]
 
         education = writer["education"]
         book_list = writer["book_list"]
@@ -183,8 +203,10 @@ def generate_data(writers_list):
             "_index": INDEX,
             "_source": {
                 "writer_name": writer_name,
+                "writer_name_eng": writer_name_eng,
                 "writer_dob": writer_dob,
                 "writer_birth_place": writer_birth_place,
+                "writer_birth_place_eng": writer_birth_place_eng,
                 "education": education,
                 "book_list": book_list,
                 "writtern_language": writtern_language,

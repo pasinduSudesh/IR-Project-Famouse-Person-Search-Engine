@@ -277,3 +277,62 @@ def multi_match_agg_sort_phrase(query, sort_num, fields=['title','song_lyrics'])
 	q = json.dumps(q)
 	return q
 
+
+
+	# ====================================================================================
+
+	#cross_filds
+def multi_match_corss_fields(query, fields=['writer_name']):
+	print ("=== QUERY FIELDS ===")
+	print (fields)
+	q = {
+		"size": 104,
+		"explain": True,
+		"query": {
+			"multi_match": {
+				"query": query,
+				"fields": fields,
+				"operator": 'or',
+				"type": "cross_fields"
+			}
+		},
+		"aggs":{
+			"Name Filter": {
+				"terms": {
+					"field": "writer_name.keyword",
+					"size": 10
+				}
+			}
+		}
+	}
+
+	q = json.dumps(q)
+	return q
+
+def multi_match_phrase_prefix(query, fields=['writer_name']):
+	print ("=== QUERY FIELDS ===")
+	print (fields)
+	q = {
+		"size": 104,
+		"explain": True,
+		"query": {
+			"multi_match": {
+				"query": query,
+				"fields": fields,
+				"operator": 'or',
+				"type": "phrase_prefix"
+			}
+		},
+		"aggs":{
+			"Name Filter": {
+				"terms": {
+					"field": "writer_name.keyword",
+					"size": 10
+				}
+			}
+		}
+	}
+
+	q = json.dumps(q)
+	return q
+

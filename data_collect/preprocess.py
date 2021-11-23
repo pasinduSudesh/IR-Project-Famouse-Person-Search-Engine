@@ -16,6 +16,12 @@ for writer in book_writer_raw_data["writers"]:
         writer["writer_name"] = None
     
     # Preprocess writer Date of Birth
+    if 'writer_name_eng' in writer:
+        writer["writer_name_eng"] = writer["writer_name_eng"].strip()
+    else:
+        writer["writer_name_eng"] = None
+
+            # Preprocess writer Date of Birth
     if 'writer_dob' in writer:
         writer["writer_dob"] = writer["writer_dob"].strip()
     else:
@@ -26,6 +32,12 @@ for writer in book_writer_raw_data["writers"]:
         writer["writer_birth_place"] = writer["writer_birth_place"].strip()
     else:
         writer["writer_birth_place"] = None
+
+    # Preprocess writer birth place
+    if 'writer_birth_place_eng' in writer:
+        writer["writer_birth_place_eng"] = writer["writer_birth_place_eng"].strip()
+    else:
+        writer["writer_birth_place_eng"] = None
 
     # Preprocess writer birth education details
     if 'education' in writer:

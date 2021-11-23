@@ -69,7 +69,7 @@ Data is contained in jason file.All data in sinhala language. Writer name is in 
  ### Functionalities
  - Can search by using writer_name, writer_name_eng, writer_dob, writer_birth_place, book_list, writer_life_story, writtern_language, wrote_categories
 
-ඇලන් මුවර්, ජී‍.බී. සේනානායක, දැල් කවුළුව, පේරාදෙණිය විශ්වවිද්‍යාලය
+  - ඇලන් මුවර්, ජී‍.බී. සේනානායක, දැල් කවුළුව, පේරාදෙණිය විශ්වවිද්‍යාලය
 
 - Search engine can understand some synonyms related to writer name, writer birth place, writer wrote books, writer education level
   - Writer Name - රැයිපියෙල් තෙන්නකෝන් රචකයා, මහගම සේකර ගත්කරු
@@ -79,11 +79,22 @@ Data is contained in jason file.All data in sinhala language. Writer name is in 
 
 - Writer can search their name in English language
 
-author mahagama sekara 
+  - author mahagama sekara 
 
 - Search Query can be in both sinhala and English languagr
 
-author මහගම සේකර
+  - author මහගම සේකර
 
+### Indexing Techniques
+- 'ICU_Tokenizer is used for sinhala languahge tokenizer
+-  'edge_ngram' filter is used for buils n-grams
+
+### Query Techniques
+Rule based text mining method is used to identify the quey strings
+Used synonyms for identify the search fields
+
+Usef following query types in ElasticSearch
+1. cross_field queries
+2. phrase_prefix queries
 
 

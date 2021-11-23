@@ -72,10 +72,10 @@ Data is contained in jason file.All data in sinhala language. Writer name is in 
 ඇලන් මුවර්, ජී‍.බී. සේනානායක, දැල් කවුළුව, පේරාදෙණිය විශ්වවිද්‍යාලය
 
 - Search engine can understand some synonyms related to writer name, writer birth place, writer wrote books, writer education level
--- Writer Name - රැයිපියෙල් තෙන්නකෝන් රචකයා, මහගම සේකර ගත්කරු
--- Writer Birth Place - කොළඹ උපන් රචකයෝ
--- Writer wrote books - රතු රෝස ලියූ රචකයා
--- Writer education level - රද්දොළුවේ බුදුනු පාසල ඉගෙනගත් රචකයා
+  - Writer Name - රැයිපියෙල් තෙන්නකෝන් රචකයා, මහගම සේකර ගත්කරු
+  - Writer Birth Place - කොළඹ උපන් රචකයෝ
+  - Writer wrote books - රතු රෝස ලියූ රචකයා
+  - Writer education level - රද්දොළුවේ බුදුනු පාසල ඉගෙනගත් රචකයා
 
 - Writer can search their name in English language
 
